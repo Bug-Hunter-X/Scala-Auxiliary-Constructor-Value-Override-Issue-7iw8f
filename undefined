@@ -1,0 +1,18 @@
+```scala
+class MyClass(val value: Int) {
+  def this() = this(0) // Auxiliary constructor, correctly calling the primary constructor
+
+  def setValue(newValue: Int): Unit = {
+    // Use a method to update the value if needed, maintaining immutability if desired
+    println("Setting a new value")
+  }
+}
+
+val myInstance = new MyClass()
+println(myInstance.value) // Output: 0
+
+val anotherInstance = new MyClass(5)
+println(anotherInstance.value) // Output: 5
+
+anotherInstance.setValue(10)
+```
